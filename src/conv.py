@@ -227,7 +227,7 @@ def ensemble(nets):
                        if plurality_test_predictions[j] != test_y_eval[j]]
     erroneous_predictions = [plurality(all_test_predictions[j])
                              for j in error_locations]
-    print("Accuracy is {:.2%}").format((1-len(error_locations)/10000.0))
+    print("Accuracy is {:.2%}".format((1-len(error_locations)/10000.0)))
     return error_locations, erroneous_predictions
 
 def plot_errors(error_locations, erroneous_predictions=None):
